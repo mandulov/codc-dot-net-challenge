@@ -1,4 +1,5 @@
-﻿using System.Security.Claims;
+﻿using System;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,11 +9,11 @@ namespace Codc.BasketManagement.HttpService.Controllers
     [ApiController]
     public abstract class BaseController : ControllerBase
     {
-        protected string UserId
+        protected Guid UserId
         {
             get
             {
-                return this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                return Guid.Parse(this.User.FindFirst(ClaimTypes.NameIdentifier).Value);
             }
         }
     }
