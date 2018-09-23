@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="2.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Codc.BasketManagement.Application\Codc.BasketManagement.Application.csproj" />
+    <ProjectReference Include="..\Codc.BasketManagement.Domain\Codc.BasketManagement.Domain.csproj" />
+    <ProjectReference Include="..\Codc.BasketManagement.Infrastructure\Codc.BasketManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
