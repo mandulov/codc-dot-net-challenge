@@ -1,7 +1,9 @@
 ﻿using Codc.BasketManagement.Application.InputModels;
+using Codc.BasketManagement.Domain.Models;
 using Codc.BasketManagement.Domain.Repositories;
 using Codc.BasketManagement.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Codc.BasketManagement.HttpService.Controllers
 {
@@ -42,6 +44,12 @@ namespace Codc.BasketManagement.HttpService.Controllers
         {
             this.basketRepository.Clear();
             return NoContent();
+        }
+
+        [HttpGet]
+        public ActionResult<IEnumerable<BasketItem>> View()
+        {
+            return Ok(this.basketRepository.View());
         }
     }
 }

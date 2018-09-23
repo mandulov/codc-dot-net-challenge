@@ -43,5 +43,10 @@ namespace Codc.BasketManagement.Infrastructure.Repositories
         {
             this.userBasket.Clear();
         }
+
+        public IEnumerable<BasketItem> View()
+        {
+            return this.userBasket.View();
+        }
     }
 }

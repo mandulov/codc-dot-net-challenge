@@ -42,6 +42,11 @@ namespace Codc.BasketManagement.Domain.Models
             this.items.Clear();
         }
 
+        public IEnumerable<BasketItem> View()
+        {
+            return this.items;
+        }
+
         private BasketItem Find(int productId)
         {
             BasketItem basketItem =
