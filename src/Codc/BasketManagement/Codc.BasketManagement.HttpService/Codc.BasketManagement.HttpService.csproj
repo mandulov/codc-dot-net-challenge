@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-Codc.BasketManagement.HttpService-9971BA8D-0FB4-4A2B-903F-5040D09C3A6B</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codc.BasketManagement.Application\Codc.BasketManagement.Application.csproj" />
+    <ProjectReference Include="..\Codc.BasketManagement.Domain\Codc.BasketManagement.Domain.csproj" />
+    <ProjectReference Include="..\Codc.BasketManagement.Infrastructure\Codc.BasketManagement.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
