@@ -17,6 +17,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1
             }
         }
 
+        // POST api/v{version}/baskets
         [HttpPost]
         public ActionResult AddItem(BasketAddItemInputModel item)
         {
@@ -24,6 +25,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1
             return Ok();
         }
 
+        // PUT api/v{version}/baskets
         [HttpPut]
         public ActionResult UpdateItem(BasketUpdateItemInputModel item)
         {
@@ -31,6 +33,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1
             return Ok();
         }
 
+        // DELETE api/v{version}/baskets/products/{productId}
         [HttpDelete("products/{productId}")]
         public ActionResult RemoveItem(int productId)
         {
@@ -38,6 +41,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1
             return NoContent();
         }
 
+        // DELETE api/v{version}/baskets
         [HttpDelete]
         public ActionResult ClearBasket()
         {

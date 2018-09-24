@@ -8,6 +8,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1_1
     [Route("api/v{version:apiVersion}/[controller]")]
     public class BasketsController : v1.BasketsController
     {
+        // GET api/v{version}/baskets
         [HttpGet]
         public ActionResult<IEnumerable<BasketItem>> View()
         {
