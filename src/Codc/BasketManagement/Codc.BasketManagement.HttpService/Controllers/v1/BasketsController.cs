@@ -9,7 +9,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1
     [Route("api/v{version:apiVersion}/[controller]")]
     public class BasketsController : BaseController
     {
-        protected IBasketRepository basketRepository
+        protected IBasketRepository BasketRepository
         {
             get
             {
@@ -20,28 +20,28 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1
         [HttpPost]
         public ActionResult AddItem(BasketAddItemInputModel item)
         {
-            this.basketRepository.Add(item.ProductId, item.Amount ?? 1);
+            this.BasketRepository.Add(item.ProductId, item.Amount ?? 1);
             return Ok();
         }
 
         [HttpPut]
         public ActionResult UpdateItem(BasketUpdateItemInputModel item)
         {
-            this.basketRepository.Update(item.ProductId, item.Amount);
+            this.BasketRepository.Update(item.ProductId, item.Amount);
             return Ok();
         }
 
         [HttpDelete("products/{productId}")]
         public ActionResult RemoveItem(int productId)
         {
-            this.basketRepository.Remove(productId);
+            this.BasketRepository.Remove(productId);
             return NoContent();
         }
 
         [HttpDelete]
         public ActionResult ClearBasket()
         {
-            this.basketRepository.Clear();
+            this.BasketRepository.Clear();
             return NoContent();
         }
     }

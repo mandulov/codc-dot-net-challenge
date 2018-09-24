@@ -11,7 +11,7 @@ namespace Codc.BasketManagement.HttpService.Controllers.v1_1
         [HttpGet]
         public ActionResult<IEnumerable<BasketItem>> View()
         {
-            return Ok(this.basketRepository.View());
+            return Ok(this.BasketRepository.View());
         }
     }
 }
