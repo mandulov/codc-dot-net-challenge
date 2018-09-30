@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Codc.BasketManagement.Application\Codc.BasketManagement.Application.csproj" />
+    <ProjectReference Include="..\Codc.BasketManagement.Domain\Codc.BasketManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
